@@ -1,0 +1,374 @@
+/* ==== General base styles ==== */
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f0f7ff 0%, #eaffe4 100%);
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button, input, select {
+  font-family: inherit;
+}
+input, select, button {
+  outline: none;
+}
+
+/* ==== Header ==== */
+.header {
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+  color: #fff;
+  box-shadow: 0 2px 10px #e9e9e9;
+  position: sticky; top: 0; z-index: 20;
+  padding: 0;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 18px 10px;
+}
+.header-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.header-title .accent {
+  color: #ffd700;
+}
+.header-links {
+  display: flex;
+  gap: 10px;
+}
+.header-link {
+  padding: 8px 22px;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  color: #fff;
+  transition: background 0.2s, color 0.2s;
+}
+.header-link.selected, .header-link:hover {
+  background: #fff;
+  color: #2563eb;
+  box-shadow: 0 1px 6px rgba(56,112,243,0.08);
+}
+
+/* ==== SearchBar ==== */
+.search-bar-box {
+  max-width: 355px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+.search-bar-input {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 18px;
+  border: 1px solid #6395ff;
+  box-shadow: 0 2px 6px #edf4ff;
+  font-size: 1rem;
+  color: #333;
+  transition: border .2s;
+}
+.search-bar-input:focus {
+  border-color: #2563eb;
+}
+
+/* ==== Doctor Cards Grid ==== */
+.doctor-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+@media (min-width: 600px) {
+  .doctor-card-grid { grid-template-columns: repeat(2,1fr);}
+}
+@media (min-width: 960px) {
+  .doctor-card-grid { grid-template-columns: repeat(3,1fr);}
+}
+
+/* ==== DoctorCard ==== */
+.doctor-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 4px 16px #e1e1e155;
+  text-align: center;
+  padding: 30px 10px 24px;
+  transition: box-shadow .23s, transform .23s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.doctor-card:hover {
+  box-shadow: 0 8px 30px #20399515;
+  transform: translateY(-4px) scale(1.03);
+}
+.doctor-card-avatar {
+  width: 5.5rem; height: 5.5rem;
+  border-radius: 50%;
+  border: 4px solid #dbeafe;
+  object-fit: cover;
+  transition: transform .2s;
+}
+.doctor-card:hover .doctor-card-avatar {
+  transform: scale(1.08);
+}
+.doctor-card-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 22px 0 4px;
+  color: #25304a;
+}
+.doctor-card-specialization {
+  color: #5788af;
+  margin-bottom: 6px;
+  font-size: .97rem;
+}
+.doctor-card-availability { margin-bottom: 10px; }
+.doctor-card-profile-link {
+  margin-top: 7px;
+  display: inline-block;
+  background: linear-gradient(90deg,#2563eb,#22d3ee);
+  padding: 7px 28px;
+  color: #fff;
+  font-size: .97rem;
+  border-radius: 999px;
+  box-shadow: 0 1px 6px #5eead462;
+  transition: background .18s, transform .15s;
+  font-weight: 500;
+}
+.doctor-card-profile-link:hover {
+  background: linear-gradient(90deg,#1d4ed8,#14b8a6);
+  transform: scale(1.06);
+}
+
+/* ==== AvailabilityBadge ==== */
+.badge {
+  padding: 5px 18px;
+  border-radius: 12px;
+  font-size: 0.90rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  display: inline-block;
+}
+.badge-available { background: #ebfbee; color: #159f29; border: 1.5px solid #a7f3d0;}
+.badge-booked { background: #fef2f2; color: #ea364a; border: 1.5px solid #fecaca;}
+.badge-leave { background: #fefce8; color: #eab308; border: 1.5px solid #fde68a;}
+
+/* ==== Profile Page ==== */
+.profile-page-main {
+  max-width: 470px;
+  margin: 46px auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 30px #c8e7ff51;
+  padding: 30px 30px;
+}
+.profile-avatar {
+  display: block;
+  width: 105px; height: 105px;
+  border-radius: 50%; border: 3px solid #b2deff; margin: 0 auto;
+  object-fit: cover;
+  box-shadow: 0 6px 18px #b5e8d1c8;
+}
+.profile-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #123A74;
+  margin: 20px 0 3px;
+  text-align: center;
+}
+.profile-spec {
+  text-align: center; color: #608DC6; font-size: 1.09rem; margin-bottom: 17px;
+}
+.profile-bio {
+  color: #294050; font-size: 1.04rem; margin: 4px 0 23px;
+}
+.profile-availability-title {
+  font-weight: 600; font-size: 1.05rem; margin: 22px 0 4px; color: #0278bf;
+}
+.profile-availability-list { padding-left: 16px; margin-bottom: 12px;}
+.profile-availability-item { color: #4b4a43; margin-bottom: 4px; font-size: .94rem;}
+.profile-book-btn {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(90deg,#2563eb,#5eead4 90%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.06rem;
+  border-radius: 10px;
+  padding: 12px 0;
+  text-align: center;
+  box-shadow: 0 4px 18px #c7f7e5b7;
+  transition: background .18s, transform .15s;
+}
+.profile-book-btn:hover {
+  background: linear-gradient(90deg,#1d4ed8,#14b8a6);
+  transform: scale(1.03);
+}
+
+/* ==== Appointments ==== */
+.appointments-container {
+  max-width: 1000px; margin: 0 auto;
+  padding: 45px 14px 0;
+}
+@media (min-width:600px) {
+  .appointments-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 28px;
+  }
+}
+@media (min-width:960px) {
+  .appointments-card-grid { grid-template-columns: repeat(3,1fr);}
+}
+.appointment-empty {
+  background: #fff;
+  border-radius: 13px;
+  padding: 46px;
+  box-shadow: 0 8px 34px #e0e7fda7;
+  text-align: center;
+  color: #8397af;
+}
+.appointment-empty-btn {
+  margin-top: 15px;
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  padding: 8px 28px;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 1.03rem;
+  box-shadow: 0 2px 8px #60a5fa22;
+  transition: background .2s;
+}
+.appointment-empty-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ==== AppointmentCard ==== */
+.appointment-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 17px #befff45f;
+  padding: 2rem 1.25rem;
+  transition: box-shadow .22s, transform .19s;
+  position: relative;
+}
+.appointment-card:hover {
+  box-shadow: 0 12px 32px #23349b16;
+  transform: translateY(-3px) scale(1.02);
+}
+.appointment-card .appoint-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.appoint-doc {
+  font-weight: bold;
+  font-size: 1.07rem;
+  color: #355d8a;
+}
+.appoint-status {
+  font-size: .97rem;
+  padding: 3px 18px;
+  border-radius: 8px;
+  color: #fff;
+}
+.appoint-status-upcoming { background: #15c279;}
+.appoint-status-completed { background: #a6b0b8;}
+.appoint-info {
+  font-size: .97rem;
+  margin: 14px 0;
+  color: #454950;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 10px;
+  row-gap: 4px;
+}
+.appointment-btn-row {
+  margin-top: 14px;
+  display: flex;
+  gap: 9px;
+}
+.appointment-btn {
+  border: none;
+  background: #ff274e;
+  color: #fff;
+  padding: 7px 19px;
+  border-radius: 7px;
+  font-size: .97rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background .2s;
+}
+.appointment-btn:disabled { opacity: .6; cursor: not-allowed;}
+.appointment-btn.alt {
+  background: #2563eb;
+}
+.appointment-btn.alt:hover {
+  background: #183dbf;
+}
+.appointment-btn:hover {
+  background: #d71b3b;
+}
+
+/* ==== Appointment Form ==== */
+.appointment-form {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px #8edcf59d;
+  padding: 38px 27px 19px;
+  max-width: 540px; margin: 0 auto;
+}
+.appointment-field {
+  margin-bottom: 24px;
+}
+.appointment-label {
+  margin-bottom: 4px;
+  font-size: .98rem;
+  color: #2c4263;
+  display: block;
+  font-weight: 500;
+}
+.appointment-input, .appointment-select {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1.7px solid #b6cef6;
+  font-size: 1.02rem;
+  color: #1b2839;
+  transition: border .18s;
+}
+.appointment-input:focus, .appointment-select:focus {
+  border-color: #2563eb;
+}
+.appointment-error {
+  color: #fb304b; font-size: .93rem; margin-top: 2px;
+}
+.book-btn {
+  width: 100%;
+  background: linear-gradient(90deg,#2563eb,#15ebc3 80%);
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.06rem;
+  padding: 13px 0;
+  border-radius: 13px;
+  margin-top: 22px;
+  cursor: pointer;
+  transition: background .2s, transform .17s;
+  box-shadow: 0 2px 15px #c7f7e5a4;
+}
+.book-btn:hover {
+  background: linear-gradient(81deg,#1d4ed8,#12a8b8 99%);
+  transform: scale(1.04);
+}

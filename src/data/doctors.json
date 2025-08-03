@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "name": "Dr. Asha Verma",
+    "specialization": "Cardiologist",
+    "avatar": "/avatars/asha.jpg",
+    "status": "Available Today",
+    "bio": "10 years of experience in cardiology, specializing in adult heart diseases.",
+    "schedule": {
+      "2025-08-03": ["09:00", "10:00", "14:00"],
+      "2025-08-04": ["11:00", "15:00"]
+    }
+  },
+  {
+    "id": "2",
+    "name": "Dr. Rohan Gupta",
+    "specialization": "Dermatologist",
+    "avatar": "/avatars/rohan.jpg",
+    "status": "On Leave",
+    "bio": "Specialist in skin care and dermatological disorders.",
+    "schedule": {}
+  },
+  {
+    "id": "3",
+    "name": "Dr. Neha Singh",
+    "specialization": "Pediatrician",
+    "avatar": "/avatars/neha.jpg",
+    "status": "Available Today",
+    "bio": "Experienced pediatrician focusing on child healthcare and immunizations.",
+    "schedule": {
+      "2025-08-03": ["10:30", "12:00", "16:00"],
+      "2025-08-05": ["09:00", "11:00"]
+    }
+  },
+  {
+    "id": "4",
+    "name": "Dr. Amitabh Sharma",
+    "specialization": "Orthopedic Surgeon",
+    "avatar": "/avatars/amitabh.jpg",
+    "status": "Fully Booked",
+    "bio": "Orthopedic surgeon specializing in joint replacement and sports injuries.",
+    "schedule": {
+      "2025-08-06": ["09:00", "13:00"],
+      "2025-08-07": ["10:00", "15:00"]
+    }
+  },
+  {
+    "id": "5",
+    "name": "Dr. Kavita Joshi",
+    "specialization": "Gynecologist",
+    "avatar": "/avatars/kavita.jpg",
+    "status": "Available Today",
+    "bio": "Expert in women’s health, prenatal and postnatal care.",
+    "schedule": {
+      "2025-08-04": ["09:00", "11:00", "14:00"],
+      "2025-08-08": ["10:00", "13:00"]
+    }
+  },
+  {
+    "id": "6",
+    "name": "Dr. Sanjay Mehta",
+    "specialization": "Neurologist",
+    "avatar": "/avatars/sanjay.jpg",
+    "status": "On Leave",
+    "bio": "Treats neurological disorders including epilepsy and migraines.",
+    "schedule": {}
+  }
+]
